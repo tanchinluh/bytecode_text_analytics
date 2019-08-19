@@ -1,0 +1,97 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>text_stripnumber</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="text_striphtml.html">&lt;&lt; text_striphtml</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_e622df15fba87789584c07120a02e36b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="text_stripurl.html">text_stripurl &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">text_analytics</a> &gt;&gt; <a href="section_e622df15fba87789584c07120a02e36b.html">text_analytics</a> &gt; text_stripnumber</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">text_stripnumber</h1>
+    <p class="refpurpose">Strip all numbers and replace with the given rep_str.</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">out_str</span><span class="default"> = </span><span class="functionid">text_stripnumber</span><span class="default">(</span><span class="default">in_str</span><span class="default"> [,</span><span class="default">rep_str</span><span class="default">]);</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">in_str :</span>
+            <dd><p class="para">Input string</p></dd></dt>
+        <dt><span class="term">rep_str :</span>
+            <dd><p class="para">Replacement string</p></dd></dt>
+        <dt><span class="term">out_str :</span>
+            <dd><p class="para">Output string</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Look for one or more characters between 0-9 tag it with another common name, by default, &#0034;number&#0034;.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">in_str</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0039;</span><span class="scilabstring">The postal code for our office is 47100</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">;</span>
+<span class="scilabid">out_str</span> <span class="scilaboperator">=</span> <span class="scilabid">text_stripnumber</span><span class="scilabopenclose">(</span><span class="scilabid">in_str</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<a class="scilabcommand" href="scilab://disp">disp</a><span class="scilabopenclose">(</span><span class="scilabid">out_str</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="nlp_sentiment.html" class="link">nlp_sentiment</a> &#8212; Sentiment analysis of a sentence using Stanford NLP</li>
+   <li class="member"><a href="text_gencloud.html" class="link">text_gencloud</a> &#8212; Generate text cloud from a given text-count pairs</li>
+   <li class="member"><a href="text_porterstemmer.html" class="link">text_porterstemmer</a> &#8212; Apply stemming on the input text</li>
+   <li class="member"><a href="text_stripdollar.html" class="link">text_stripdollar</a> &#8212; Strip all dollar sign and replace with the given rep_str.</li>
+   <li class="member"><a href="text_stripemail.html" class="link">text_stripemail</a> &#8212; Strip all emails and replace with the given rep_str.</li>
+   <li class="member"><a href="text_striphtml.html" class="link">text_striphtml</a> &#8212; Strip all HTML and replace with the given rep_str.</li>
+   <li class="member"><a href="text_stripnumber.html" class="link">text_stripnumber</a> &#8212; Strip all numbers and replace with the given rep_str.</li>
+   <li class="member"><a href="text_stripurl.html" class="link">text_stripurl</a> &#8212; Strip all urls and replace with the given rep_str.</li>
+   <li class="member"><a href="text_tokenize.html" class="link">text_tokenize</a> &#8212; Tokenize and also get rid of any punctuation</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">C.L. Tan - Bytecode Malaysia.</li></ul></div>
+
+<div class="refsection"><h3 class="title">Bibliography</h3>
+   <p class="para">Andrew Ng, Machine Learning Online Course, Week 6 notes and assignment: https://www.coursera.org/learn/machine-learning</p></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="text_striphtml.html">&lt;&lt; text_striphtml</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_e622df15fba87789584c07120a02e36b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="text_stripurl.html">text_stripurl &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

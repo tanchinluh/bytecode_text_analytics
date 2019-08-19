@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+<tocitem target="index" text="text_analytics">
+<tocitem target="section_e622df15fba87789584c07120a02e36b" text="text_analytics">
+<tocitem target="nlp_sentiment" text="nlp_sentiment"/>
+<tocitem target="text_gencloud" text="text_gencloud"/>
+<tocitem target="text_porterstemmer" text="text_porterstemmer"/>
+<tocitem target="text_stripdollar" text="text_stripdollar"/>
+<tocitem target="text_stripemail" text="text_stripemail"/>
+<tocitem target="text_striphtml" text="text_striphtml"/>
+<tocitem target="text_stripnumber" text="text_stripnumber"/>
+<tocitem target="text_stripurl" text="text_stripurl"/>
+<tocitem target="text_tokenize" text="text_tokenize"/>
+</tocitem>
+</tocitem>
+</toc>

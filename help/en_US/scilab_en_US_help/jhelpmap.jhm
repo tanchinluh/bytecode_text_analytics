@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/map_1_0.dtd">
+<map version="1.0">
+<mapID target="index" url="index.html"/>
+<mapID target="section_e622df15fba87789584c07120a02e36b" url="section_e622df15fba87789584c07120a02e36b.html"/>
+<mapID target="nlp_sentiment" url="nlp_sentiment.html"/>
+<mapID target="text_gencloud" url="text_gencloud.html"/>
+<mapID target="text_porterstemmer" url="text_porterstemmer.html"/>
+<mapID target="text_stripdollar" url="text_stripdollar.html"/>
+<mapID target="text_stripemail" url="text_stripemail.html"/>
+<mapID target="text_striphtml" url="text_striphtml.html"/>
+<mapID target="text_stripnumber" url="text_stripnumber.html"/>
+<mapID target="text_stripurl" url="text_stripurl.html"/>
+<mapID target="text_tokenize" url="text_tokenize.html"/>
+</map>

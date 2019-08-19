@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from text_porterstemmer.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="text_porterstemmer" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>text_porterstemmer</refname>
+    <refpurpose>Apply stemming on the input text</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   str = text_porterstemmer(filepath);
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>filepath :</term>
+            <listitem><para> String of path to file, or Scilab string array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>str :</term>
+            <listitem><para> The result of stemming</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+A simple function using the Stemmer2 class
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+input_str = 'Scilab is a free and open source software for engineers & scientists';
+out_str = text_porterstemmer(input_str);
+disp(out_str);
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="nlp_sentiment">nlp_sentiment</link></member>
+   <member><link linkend="text_gencloud">text_gencloud</link></member>
+   <member><link linkend="text_porterstemmer">text_porterstemmer</link></member>
+   <member><link linkend="text_stripdollar">text_stripdollar</link></member>
+   <member><link linkend="text_stripemail">text_stripemail</link></member>
+   <member><link linkend="text_striphtml">text_striphtml</link></member>
+   <member><link linkend="text_stripnumber">text_stripnumber</link></member>
+   <member><link linkend="text_stripurl">text_stripurl</link></member>
+   <member><link linkend="text_tokenize">text_tokenize</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua - Bytecode Malaysia.</member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Bibliography</title>
+   <para>Martin Porter, The Porter Stemming Algorithm: https://tartarus.org/martin/PorterStemmer/</para>
+</refsection>
+</refentry>

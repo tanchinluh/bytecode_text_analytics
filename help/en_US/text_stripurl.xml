@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from text_stripurl.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="text_stripurl" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>text_stripurl</refname>
+    <refpurpose>Strip all urls and replace with the given rep_str.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   out_str = text_stripurl(in_str [,rep_str]);
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>in_str :</term>
+            <listitem><para> Input string</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>rep_str :</term>
+            <listitem><para> Replacement string</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>out_str :</term>
+            <listitem><para> Output string</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Look for strings starting with http:// or https:// and replace it with another common name, by default, "httpaddr".
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+in_str = 'Our website address is https://www.bytecode-asia.com/';
+out_str = text_stripurl(in_str);
+disp(out_str);
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="nlp_sentiment">nlp_sentiment</link></member>
+   <member><link linkend="text_gencloud">text_gencloud</link></member>
+   <member><link linkend="text_porterstemmer">text_porterstemmer</link></member>
+   <member><link linkend="text_stripdollar">text_stripdollar</link></member>
+   <member><link linkend="text_stripemail">text_stripemail</link></member>
+   <member><link linkend="text_striphtml">text_striphtml</link></member>
+   <member><link linkend="text_stripnumber">text_stripnumber</link></member>
+   <member><link linkend="text_stripurl">text_stripurl</link></member>
+   <member><link linkend="text_tokenize">text_tokenize</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>C.L. Tan - Bytecode Malaysia.</member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Bibliography</title>
+   <para>Andrew Ng, Machine Learning Online Course, Week 6 notes and assignment: https://www.coursera.org/learn/machine-learning</para>
+</refsection>
+</refentry>

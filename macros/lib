@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scilablib name="text_analyticslib">
+  <macro name="nlp_sentiment" file="nlp_sentiment.bin" md5="02154694a74891126a238e9e582b8f46"/>
+  <macro name="text_gencloud" file="text_gencloud.bin" md5="ab5fef21b95d8f9a90d53bc30126d185"/>
+  <macro name="text_porterstemmer" file="text_porterstemmer.bin" md5="4bb1a201eda92f54503d0e81e49d81c5"/>
+  <macro name="text_stripdollar" file="text_stripdollar.bin" md5="4401583e1709d0ff2fb7cd5d2981b7f7"/>
+  <macro name="text_stripemail" file="text_stripemail.bin" md5="5d99e0e577e5814aa31c7ba298bc94cb"/>
+  <macro name="text_striphtml" file="text_striphtml.bin" md5="dd2666983e6b652a3f64123f3187f429"/>
+  <macro name="text_stripnumber" file="text_stripnumber.bin" md5="e1ccf34215b892211e0838b7391c630c"/>
+  <macro name="text_stripurl" file="text_stripurl.bin" md5="4183183e2bc600af49db5ff394b3992b"/>
+  <macro name="text_tokenize" file="text_tokenize.bin" md5="69f761370bc67af7c2c4127dd5a3c139"/>
+</scilablib>

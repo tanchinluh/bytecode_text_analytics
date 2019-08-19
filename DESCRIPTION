@@ -1,0 +1,32 @@
+Toolbox: text_analytics
+
+Title: Text Analytics Toolbox
+
+Summary: Analytics for unstructured text data
+
+Version: 0.1.0
+
+Author: Joshua Teoh
+  Tan Chin Luh
+
+Maintainer: Tan Chin Luh <chinluh.tan@bytecode-asia.com>
+  Joshua Teoh <joshua.teoh@bytecode-asia.com>
+
+Category: Data Analysis
+
+Entity: Bytecode Asia
+
+WebSite: bytecode-asia.com
+
+License: GPL 3.0
+
+ScilabVersion: >= 6.0
+
+Depends: 
+
+// Creation date
+Date: 2019-08-19
+
+Description: Analytics of Unstructured text data
+
+

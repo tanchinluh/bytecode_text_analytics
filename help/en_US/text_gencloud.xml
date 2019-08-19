@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from text_gencloud.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="text_gencloud" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>text_gencloud</refname>
+    <refpurpose>Generate text cloud from a given text-count pairs</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   text_gencloud(tag_text,tag_count)
+   text_gencloud(tag_text,tag_count,x_spacing,y_spacing,sz_inc,colormap,isbold)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>tag_text :</term>
+            <listitem><para> A (m x 1) string matrix of the text to generate text cloud</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>tag_count :</term>
+            <listitem><para> A (m x 1) double matrix correspond to the counts of the text appearance</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>x_spacing :</term>
+            <listitem><para> Spacing between words in a row, in the range of 0.01 - 0.2</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>y_spacing :</term>
+            <listitem><para> Spacing between words in col, in the range of 0.01 - 0.2</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>sz_inc :</term>
+            <listitem><para> Size to increase or decrese for all words, in the range of 1 - 10</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>colormap :</term>
+            <listitem><para> Colormap could be in 3 format, [r g b], color string such as "blue", and standard colormap such as hsvcolormap(64) etc.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>isbold :</term>
+            <listitem><para> To plot the text in bold, %t or %f</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This function generate a text cloud base on given text and count.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+AtoZ = strsplit(ascii([65:90,97:122]));
+m = 100;
+for cnt = 1:m
+strlen = round(rand()*10+3);
+randstr = round(rand(1,strlen)*51+1);
+tag_text(cnt) = strcat(AtoZ(randstr));
+end
+tag_count = round(rand(m,1).*4 + 1);
+text_gencloud(tag_text,tag_count,0.02,0.1,1,hsvcolormap(6),%t);
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>C.L. Tan - Bytecode Malaysia.</member>
+   </simplelist>
+</refsection>
+</refentry>

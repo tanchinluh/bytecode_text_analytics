@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY a370fb57c7c83b4535d5bf212186f0a5a SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/text_analytics/help/en_US/nlp_sentiment.xml">
+<!ENTITY a0daa4d070ca3330bb1144765c90a84fd SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/text_analytics/help/en_US/text_gencloud.xml">
+<!ENTITY a8f6822035b63341478a4d60b50809cec SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/text_analytics/help/en_US/text_porterstemmer.xml">
+<!ENTITY a5c2ac9cdd64d19bb2a0463bc91599efd SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/text_analytics/help/en_US/text_stripdollar.xml">
+<!ENTITY a1b88c02117c51cda146beeab7aa8620f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/text_analytics/help/en_US/text_stripemail.xml">
+<!ENTITY ab3cd1e55a2e81cd5f0d2d9ed38875230 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/text_analytics/help/en_US/text_striphtml.xml">
+<!ENTITY a70daa09a66ebd746b74d5a7d164bd107 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/text_analytics/help/en_US/text_stripnumber.xml">
+<!ENTITY a4589fdacae5ae5e5429fef3e62db1cf4 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/text_analytics/help/en_US/text_stripurl.xml">
+<!ENTITY a3afb6f8bac489a874c51ceb101981c35 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/text_analytics/help/en_US/text_tokenize.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='text_analytics_manual'>
+    <title>text_analytics</title>
+  </info>
+
+<part xml:id='section_e622df15fba87789584c07120a02e36b'>
+<title>text_analytics</title>
+&a370fb57c7c83b4535d5bf212186f0a5a;
+&a0daa4d070ca3330bb1144765c90a84fd;
+&a8f6822035b63341478a4d60b50809cec;
+&a5c2ac9cdd64d19bb2a0463bc91599efd;
+&a1b88c02117c51cda146beeab7aa8620f;
+&ab3cd1e55a2e81cd5f0d2d9ed38875230;
+&a70daa09a66ebd746b74d5a7d164bd107;
+&a4589fdacae5ae5e5429fef3e62db1cf4;
+&a3afb6f8bac489a874c51ceb101981c35;
+</part>
+</book>

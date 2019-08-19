@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from nlp_sentiment.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="nlp_sentiment" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>nlp_sentiment</refname>
+    <refpurpose>Sentiment analysis of a sentence using Stanford NLP</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>in_str :</term>
+            <listitem><para> Input string</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>url :</term>
+            <listitem><para> A valid URL with port number which point to the NLP server</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>sentiment :</term>
+            <listitem><para> Sentiment of a sentence</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>rep :</term>
+            <listitem><para> Response from NLP server</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>stat :</term>
+            <listitem><para> an integer, the error status. status=0 if no error occurred</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>stderr :</term>
+            <listitem><para> Column of text: error message.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This is a function to call a server hosting Stanford NLP engine and return the sentiment of the input string. This unction require the connection to the Standford NLP server.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="nlp_sentiment">nlp_sentiment</link></member>
+   <member><link linkend="text_gencloud">text_gencloud</link></member>
+   <member><link linkend="text_porterstemmer">text_porterstemmer</link></member>
+   <member><link linkend="text_stripdollar">text_stripdollar</link></member>
+   <member><link linkend="text_stripemail">text_stripemail</link></member>
+   <member><link linkend="text_striphtml">text_striphtml</link></member>
+   <member><link linkend="text_stripnumber">text_stripnumber</link></member>
+   <member><link linkend="text_stripurl">text_stripurl</link></member>
+   <member><link linkend="text_tokenize">text_tokenize</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>C.L. Tan - Bytecode Malaysia.</member>
+   </simplelist>
+</refsection>
+</refentry>

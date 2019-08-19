@@ -1,0 +1,13 @@
+changelog of the Text Analytics Toolbox
+
+
+text_analytics (version 0.1.0)
+    * Added Java Stemmer class inside module
+    * Add scilab_stem function
+ -- Joshua <joshua.teoh@bytecode-asia.com>  Tue, 6 Aug 2019 14:32:02 +0800
+
+text_analytics (version 0.1.0)
+    * Change scilab_stem function to text_porterstemmer.sci
+    * Add other text_* function to pre-process strings and sentenses
+    * Add first function to connect to Bytecode hosted Stanford NLP for sentiment analysis. 
+ -- C.L. Tan <chinluh.tan@bytecode-asia.com>  Tue, 19 Aug 2019 08:32:02 +0800
