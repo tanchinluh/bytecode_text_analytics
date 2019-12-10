@@ -39,6 +39,7 @@ function text_analyticslib = startModule()
 
 path_thirdparty = pathconvert(root_tlbx+"/thirdparty");
 javaclasspath(path_thirdparty)
+javaclasspath(path_thirdparty+"/twitter4j-core-4.0.7.jar")
 
 // load localization
 //  addlocalizationdomain(TOOLBOX_NAME, root_tlbx + "/locales");

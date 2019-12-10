@@ -2,8 +2,14 @@
 <!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/map_1_0.dtd">
 <map version="1.0">
 <mapID target="index" url="index.html"/>
-<mapID target="section_e622df15fba87789584c07120a02e36b" url="section_e622df15fba87789584c07120a02e36b.html"/>
+<mapID target="section_b93ecefec7958118a675c2f66028b91b" url="section_b93ecefec7958118a675c2f66028b91b.html"/>
+<mapID target="jar_import" url="jar_import.html"/>
+<mapID target="nlp_filterSentiment" url="nlp_filterSentiment.html"/>
+<mapID target="nlp_getSentiment" url="nlp_getSentiment.html"/>
 <mapID target="nlp_sentiment" url="nlp_sentiment.html"/>
+<mapID target="nlp_simple" url="nlp_simple.html"/>
+<mapID target="nlp_tabulSentiment" url="nlp_tabulSentiment.html"/>
+<mapID target="nlp_url" url="nlp_url.html"/>
 <mapID target="text_gencloud" url="text_gencloud.html"/>
 <mapID target="text_porterstemmer" url="text_porterstemmer.html"/>
 <mapID target="text_stripdollar" url="text_stripdollar.html"/>
@@ -12,4 +18,8 @@
 <mapID target="text_stripnumber" url="text_stripnumber.html"/>
 <mapID target="text_stripurl" url="text_stripurl.html"/>
 <mapID target="text_tokenize" url="text_tokenize.html"/>
+<mapID target="twitter_TweetSentimentDemo" url="twitter_TweetSentimentDemo.html"/>
+<mapID target="twitter_getTweets" url="twitter_getTweets.html"/>
+<mapID target="twitter_init" url="twitter_init.html"/>
+<mapID target="twitter_processTweets" url="twitter_processTweets.html"/>
 </map>

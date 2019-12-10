@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from nlp_getSentiment.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="nlp_getSentiment" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>nlp_getSentiment</refname>
+    <refpurpose>Obtains the sentiment of a given string</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   senti = nlp_getSentiment(str)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>str :</term>
+            <listitem><para> String. The text to be analysed</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>senti :</term>
+            <listitem><para> String. The sentiment of the text</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Determines the sentiment of a given text. The sentiment is set by the longest sentence in the text. This function requires the Stanford CoreNLP libraries to be added to the Scilab classpath. For a more comprehensive sentiment analysis (or for an online version), please use nlp_sentiment.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+str = "I am happy. This is a long, sad and heart breaking sentence. You are happy."
+sentiment = nlp_getSentiment(str)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="nlp_sentiment">nlp_sentiment</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T. - Bytecode Malaysia.</member>
+   </simplelist>
+</refsection>
+</refentry>

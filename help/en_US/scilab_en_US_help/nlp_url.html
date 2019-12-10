@@ -1,0 +1,93 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>nlp_url</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="nlp_tabulSentiment.html">&lt;&lt; nlp_tabulSentiment</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="text_gencloud.html">text_gencloud &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">text_analytics</a> &gt;&gt; <a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a> &gt; nlp_url</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">nlp_url</h1>
+    <p class="refpurpose">Sends an annotation request to a NLP server.</p></div>
+
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">in_str :</span>
+            <dd><p class="para">Input string</p></dd></dt>
+        <dt><span class="term">ann :</span>
+            <dd><p class="para">Specified annotators</p></dd></dt>
+        <dt><span class="term">url :</span>
+            <dd><p class="para">A valid URL with port number which point to the NLP server</p></dd></dt>
+        <dt><span class="term">json :</span>
+            <dd><p class="para">Boolean. Converts response to struct if %t(default %f). Requires JSON Toolbox to be installed.</p></dd></dt>
+        <dt><span class="term">rep :</span>
+            <dd><p class="para">String array or struct. Response from NLP server.</p></dd></dt>
+        <dt><span class="term">stat :</span>
+            <dd><p class="para">an integer, the error status. status=0 if no error occurred</p></dd></dt>
+        <dt><span class="term">stderr :</span>
+            <dd><p class="para">Column of text: error message.</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This is a function to send an annotation request to a server hosting Stanford NLP engine and return the annotation results. This function requires the connection to the Standford NLP server. Some annotators require other annotators to be performed first (for example ssplit requires tokenize). The results from the required annotators are included as well.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">str</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">I just had coffee. It was delicious</span><span class="scilabstring">.</span><span class="scilabstring">&#0034;</span>
+<span class="scilabid">url</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">http://127.0.0.1:9000</span><span class="scilabstring">&#0034;</span> <span class="scilabcomment">// if you setup a local host Stanford CoreNLP server</span>
+<span class="scilabopenclose">[</span><span class="scilabid">rep1</span><span class="scilabdefault">,</span><span class="scilabid">stat1</span><span class="scilabdefault">,</span><span class="scilabid">stderr1</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_url</span><span class="scilabopenclose">(</span><span class="scilabid">str1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">ssplit</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">url</span><span class="scilabopenclose">)</span>
+<span class="scilabopenclose">[</span><span class="scilabid">rep2</span><span class="scilabdefault">,</span><span class="scilabid">stat2</span><span class="scilabdefault">,</span><span class="scilabid">stderr2</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_url</span><span class="scilabopenclose">(</span><span class="scilabid">str1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">ssplit</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">url</span><span class="scilabdefault">,</span><span class="scilabconstants">%t</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="nlp_simple.html" class="link">nlp_simple</a> &#8212; Runs a specified annotator</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">C.L. Tan - Bytecode Malaysia.</li>
+   <li class="member">Joshua Teoh - Bytecode Malaysia</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="nlp_tabulSentiment.html">&lt;&lt; nlp_tabulSentiment</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="text_gencloud.html">text_gencloud &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

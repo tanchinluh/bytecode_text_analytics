@@ -21,6 +21,14 @@
   </refnamediv>
 
 
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [rep,stat,stderr] = nlp_sentiment(in_str,url)
+   
+   </synopsis>
+</refsynopsisdiv>
+
 <refsection>
    <title>Parameters</title>
    <variablelist>
@@ -63,6 +71,9 @@ This is a function to call a server hosting Stanford NLP engine and return the s
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+str = "Hello there. Have an amazing day."
+url = "http://127.0.0.1:9000" // if you setup a local host Stanford CoreNLP server
+[rep,stat,stderr] = nlp_sentiment(str,url)
 
    ]]></programlisting>
 </refsection>

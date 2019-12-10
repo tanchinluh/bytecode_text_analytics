@@ -1,0 +1,96 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>nlp_simple</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="nlp_sentiment.html">&lt;&lt; nlp_sentiment</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="nlp_tabulSentiment.html">nlp_tabulSentiment &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">text_analytics</a> &gt;&gt; <a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a> &gt; nlp_simple</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">nlp_simple</h1>
+    <p class="refpurpose">Runs a specified annotator</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">res</span><span class="default"> = </span><span class="functionid">nlp_simple</span><span class="default">(</span><span class="default">str</span><span class="default">,</span><span class="default">ann</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">str :</span>
+            <dd><p class="para">String. The text to be analyzed</p></dd></dt>
+        <dt><span class="term">ann :</span>
+            <dd><p class="para">String. The specified annotator. Available annotators are sentence splitting (ssplit), tokenization (tokenize), part of speech tagging (pos), lemmatization (lemma), named entity recognition (ner), constituency parsing (parse), dependency parsing (depparse), coreference resolution (dcoref), natural logic polarity, (natlog) and open information extraction (openie).</p></dd></dt>
+        <dt><span class="term">res :</span>
+            <dd><p class="para">List. The result from the annotation.</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Runs the specified annotator on the string. This uses annotators from Stanford Simple CoreNLP. Note: Certain annotators (ner, depparse, dcoref) requires a lot of memory. You will need to increase Scilab&#0039;s Java heap memory to be several GB or more in order to work. The heap memory can be adjusted under Preferences.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">str1</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">The lion and the unicorn were fighting for the crown. The lion beat the unicorn all around the town</span><span class="scilabstring">.</span><span class="scilabstring">&#0034;</span>
+<span class="scilabid">res1</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">ssplit</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">res2</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">tokenize</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">res3</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">pos</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">res4</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">lemma</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">str2</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">3 men lived in Gotham. They went on vacation to London</span><span class="scilabstring">.</span><span class="scilabstring">&#0034;</span>
+<span class="scilabid">res5</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str2</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">parse</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">res6</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str2</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">depparse</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">res7</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str2</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">natlog</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">res8</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str2</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">openie</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">res9</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str2</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">ner</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">str3</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">Mary had a little lamb. Its fleece was white as snow. And everywhere that she went it was sure to go</span><span class="scilabstring">.</span><span class="scilabstring">&#0034;</span>
+<span class="scilabid">res10</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_simple</span><span class="scilabopenclose">(</span><span class="scilabid">str3</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">dcoref</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="nlp_url.html" class="link">nlp_url</a> &#8212; Sends an annotation request to a NLP server.</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T.</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="nlp_sentiment.html">&lt;&lt; nlp_sentiment</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="nlp_tabulSentiment.html">nlp_tabulSentiment &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

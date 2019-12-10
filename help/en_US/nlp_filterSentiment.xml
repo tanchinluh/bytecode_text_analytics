@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from nlp_filterSentiment.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="nlp_filterSentiment" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>nlp_filterSentiment</refname>
+    <refpurpose>Filter a string array based on a given sentiment</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [filtered_str,ind] = nlp_filterSentiment(senti_vec,str_vec,senti,n)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>senti_vec :</term>
+            <listitem><para> String array. The sentiments</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>str_vec :</term>
+            <listitem><para> String array. Text corresponding to the sentiments</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>senti :</term>
+            <listitem><para> String. The specified sentiment</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>n :</term>
+            <listitem><para> Double. Maximum number of texts to return</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>filtered_str :</term>
+            <listitem><para> The filtered text</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>ind :</term>
+            <listitem><para> Double matrix. Index of the filtered text</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Extracts strings from a string array based on a given sentiment
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+sentiments = ["Neutral";"Neutral";"Positive"]
+text = ["This is a text example.";"Mic test";"I am happy."]
+[filtered_str,ind] = nlp_filterSentiment(sentiments,text,"Positive",5)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="nlp_tabulSentiment">nlp_tabulSentiment</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T. - Bytecode Malaysia.</member>
+   </simplelist>
+</refsection>
+</refentry>
