@@ -19,8 +19,14 @@
   <macro name="text_stripnumber" file="text_stripnumber.bin" md5="e1ccf34215b892211e0838b7391c630c"/>
   <macro name="text_stripurl" file="text_stripurl.bin" md5="4183183e2bc600af49db5ff394b3992b"/>
   <macro name="text_tokenize" file="text_tokenize.bin" md5="69f761370bc67af7c2c4127dd5a3c139"/>
+  <macro name="twitterStream_init" file="twitterStream_init.bin" md5="d8c282138d3985c3648dd11ef80539db"/>
   <macro name="twitter_TweetSentimentDemo" file="twitter_TweetSentimentDemo.bin" md5="03159cc8c9a33dc84b25845ffd4ada84"/>
+  <macro name="twitter_clearStream" file="twitter_clearStream.bin" md5="6395cb859345167a045cc9dd000a7b54"/>
+  <macro name="twitter_displayStream" file="twitter_displayStream.bin" md5="7f0315d99ae75c7481a631a51ccbf432"/>
+  <macro name="twitter_getStreamTweets" file="twitter_getStreamTweets.bin" md5="864963549ecbb374a0b3a38715f3700e"/>
   <macro name="twitter_getTweets" file="twitter_getTweets.bin" md5="ba983b8fcca1669df80d173121f28cff"/>
   <macro name="twitter_init" file="twitter_init.bin" md5="9ee0cb7d9d431663e267b523f556710b"/>
   <macro name="twitter_processTweets" file="twitter_processTweets.bin" md5="c8cfa2387894a02ef63b630e6c735e43"/>
+  <macro name="twitter_stopStream" file="twitter_stopStream.bin" md5="7c53a99c74632ca78aa7a9f91e3ffab9"/>
+  <macro name="twitter_stream" file="twitter_stream.bin" md5="8015e03e1331313e03a00b9bb9a0f523"/>
 </scilablib>

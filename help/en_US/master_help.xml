@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book [
 <!--Begin Entities-->
+<!ENTITY a3e7434dee24e6a9314fb9afdb76e18a3 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/getTApath.xml">
 <!ENTITY a1f2c651bc69b47e88c99a308d59e26d8 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/jar_import.xml">
 <!ENTITY ae2bf05e75afe8a52499a9343328577ef SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/nlp_filterSentiment.xml">
 <!ENTITY a9436f8a26a9a5a73cfb3dabca3d5b46c SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/nlp_getSentiment.xml">
@@ -8,6 +9,9 @@
 <!ENTITY a35bb9eb6d57a42a91c357f1d4f3dd994 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/nlp_simple.xml">
 <!ENTITY ad574555e3eb4c4ef76e64f1709f21498 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/nlp_tabulSentiment.xml">
 <!ENTITY a43e9e994bd2b59902b9c23feaa10c640 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/nlp_url.xml">
+<!ENTITY a8325cf7ab44f8519f19a5614362112fb SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/pbButton_callback.xml">
+<!ENTITY a327cf58087f943b72d8e7cada62db801 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/pbSentiment_callback.xml">
+<!ENTITY a05ac11fad9e5d735672ef97f492c0f4f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/popSentiment_callback.xml">
 <!ENTITY a3fa6a306592ffb20599353843903cfc3 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/text_gencloud.xml">
 <!ENTITY a34c0b6ee54088aa61a042a94be1c577e SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/text_porterstemmer.xml">
 <!ENTITY a9fa064a2bb4a154c3b3791aa6e217025 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/text_stripdollar.xml">
@@ -16,10 +20,16 @@
 <!ENTITY a424873d00b7cc18031acd39777e40ddf SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/text_stripnumber.xml">
 <!ENTITY aa552598f67e9a460aa305d13cb9e8ac3 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/text_stripurl.xml">
 <!ENTITY ac55cd493a012851ad5e12d83ea2f9701 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/text_tokenize.xml">
+<!ENTITY a4f11109a8273bdf8da237bd48c44e558 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitterStream_init.xml">
 <!ENTITY a92772e53ecab4103f5f17246333a501f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitter_TweetSentimentDemo.xml">
+<!ENTITY a0a687541ce32141cb4043c9849e2cff1 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitter_clearStream.xml">
+<!ENTITY a7ab0497fffe946b8b7f01d60d3fd6c16 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitter_displayStream.xml">
+<!ENTITY a0c3bb43fe0ec5378f4987b72291d417b SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitter_getStreamTweets.xml">
 <!ENTITY abfaf0cf00ca1066e88fc146967668d3c SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitter_getTweets.xml">
 <!ENTITY aabef448328e8f7d1d5e4b3251660e8ad SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitter_init.xml">
 <!ENTITY aed92b04f81b7d1dc2de1429b51e8ff8d SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitter_processTweets.xml">
+<!ENTITY aaf86986dd95c32c9a20522a835560fc2 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitter_stopStream.xml">
+<!ENTITY ac415442218de2281da25e4a2cdd4cbc5 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_text_analytics/help/en_US/twitter_stream.xml">
 <!--End Entities-->
 ]>
 <book version="5.0-subset Scilab" xml:lang="en_US"
@@ -36,6 +46,7 @@
 
 <part xml:id='section_b93ecefec7958118a675c2f66028b91b'>
 <title>text_analytics</title>
+&a3e7434dee24e6a9314fb9afdb76e18a3;
 &a1f2c651bc69b47e88c99a308d59e26d8;
 &ae2bf05e75afe8a52499a9343328577ef;
 &a9436f8a26a9a5a73cfb3dabca3d5b46c;
@@ -43,6 +54,9 @@
 &a35bb9eb6d57a42a91c357f1d4f3dd994;
 &ad574555e3eb4c4ef76e64f1709f21498;
 &a43e9e994bd2b59902b9c23feaa10c640;
+&a8325cf7ab44f8519f19a5614362112fb;
+&a327cf58087f943b72d8e7cada62db801;
+&a05ac11fad9e5d735672ef97f492c0f4f;
 &a3fa6a306592ffb20599353843903cfc3;
 &a34c0b6ee54088aa61a042a94be1c577e;
 &a9fa064a2bb4a154c3b3791aa6e217025;
@@ -51,9 +65,15 @@
 &a424873d00b7cc18031acd39777e40ddf;
 &aa552598f67e9a460aa305d13cb9e8ac3;
 &ac55cd493a012851ad5e12d83ea2f9701;
+&a4f11109a8273bdf8da237bd48c44e558;
 &a92772e53ecab4103f5f17246333a501f;
+&a0a687541ce32141cb4043c9849e2cff1;
+&a7ab0497fffe946b8b7f01d60d3fd6c16;
+&a0c3bb43fe0ec5378f4987b72291d417b;
 &abfaf0cf00ca1066e88fc146967668d3c;
 &aabef448328e8f7d1d5e4b3251660e8ad;
 &aed92b04f81b7d1dc2de1429b51e8ff8d;
+&aaf86986dd95c32c9a20522a835560fc2;
+&ac415442218de2281da25e4a2cdd4cbc5;
 </part>
 </book>

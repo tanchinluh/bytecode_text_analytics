@@ -1,0 +1,94 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>twitter_stream</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="twitter_stopStream.html">&lt;&lt; twitter_stopStream</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">text_analytics</a> &gt;&gt; <a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a> &gt; twitter_stream</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">twitter_stream</h1>
+    <p class="refpurpose">Begins the twitter streaming api</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">twitter_displayStream</span><span class="default">(</span><span class="default">twitterstream</span><span class="default">)</span>
+<span class="default">twitter_displayStream</span><span class="default">(</span><span class="default">twitterstream</span><span class="default">,</span><span class="default">options</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">twitterstream :</span>
+            <dd><p class="para">Java object. Created using twitterStream_init</p></dd></dt>
+        <dt><span class="term">options :</span>
+            <dd><p class="para">Optional parameters (in key-value pairs) to refine the search. The optional parameters are the following:</p></dd></dt>
+        <dt><span class="term">&#0034;query&#0034; :</span>
+            <dd><p class="para">String. Query used to filter the tweets. Default query is &#0034;coffee&#0034;. There is a 60 character limit for the query.</p></dd></dt>
+        <dt><span class="term">&#0034;lang&#0034; :</span>
+            <dd><p class="para">String. Tweet language. Default is &#0034;en&#0034;</p></dd></dt>
+        <dt><span class="term">&#0034;box&#0034; :</span>
+            <dd><p class="para">Double matrix. Matrix containing the coordinates of a bounding box. The coordinates should be stored as [SWlong SWlat; NElong NElat].</p></dd></dt>
+        <dt><span class="term">&#0034;limit&#0034; :</span>
+            <dd><p class="para">Double. The number of tweets to obtain from stream before stopping.</p></dd></dt>
+        <dt><span class="term">&#0034;csv&#0034; :</span>
+            <dd><p class="para">String. Automatically save tweets into a CSV using the given file name.</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Starts the twitter streaming based on the parameters set by user. For more info on how the stream is filtered, refer to https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream-parameters .</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">twitterS</span> <span class="scilaboperator">=</span> <span class="scilabid">twitterStream_init</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span>
+<a class="scilabcommand" href="scilab://consolebox">consolebox</a> <span class="scilabstring">on</span>
+<span class="scilabid">twitter_displayStream</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabopenclose">)</span>
+<span class="scilabid">twitter_stream</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">query</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">ice cream</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">limit</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">30</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="twitter_getStreamTweets.html" class="link">twitter_getStreamTweets</a> &#8212; Import tweets from Twitter stream into Scilab</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T.</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="twitter_stopStream.html">&lt;&lt; twitter_stopStream</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

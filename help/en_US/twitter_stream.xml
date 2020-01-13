@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from twitter_stream.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="twitter_stream" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>twitter_stream</refname>
+    <refpurpose>Begins the twitter streaming api</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   twitter_displayStream(twitterstream)
+   twitter_displayStream(twitterstream,options)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>twitterstream :</term>
+            <listitem><para> Java object. Created using twitterStream_init</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>options :</term>
+            <listitem><para> Optional parameters (in key-value pairs) to refine the search. The optional parameters are the following:</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>"query" :</term>
+            <listitem><para> String. Query used to filter the tweets. Default query is "coffee". There is a 60 character limit for the query.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>"lang" :</term>
+            <listitem><para> String. Tweet language. Default is "en"</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>"box" :</term>
+            <listitem><para> Double matrix. Matrix containing the coordinates of a bounding box. The coordinates should be stored as [SWlong SWlat; NElong NElat].</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>"limit" :</term>
+            <listitem><para> Double. The number of tweets to obtain from stream before stopping.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>"csv" :</term>
+            <listitem><para> String. Automatically save tweets into a CSV using the given file name.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Starts the twitter streaming based on the parameters set by user. For more info on how the stream is filtered, refer to https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream-parameters .
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+twitterS = twitterStream_init()
+consolebox on
+twitter_displayStream(twitterS)
+twitter_stream(twitterS,"query","ice cream","limit",30)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="twitter_getStreamTweets">twitter_getStreamTweets</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T.</member>
+   </simplelist>
+</refsection>
+</refentry>

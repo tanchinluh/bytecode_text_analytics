@@ -1,0 +1,99 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>twitter_getStreamTweets</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="twitter_displayStream.html">&lt;&lt; twitter_displayStream</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="twitter_getTweets.html">twitter_getTweets &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">text_analytics</a> &gt;&gt; <a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a> &gt; twitter_getStreamTweets</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">twitter_getStreamTweets</h1>
+    <p class="refpurpose">Import tweets from Twitter stream into Scilab</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">id</span><span class="default">,</span><span class="default">tweets</span><span class="default">,</span><span class="default">info</span><span class="default">] = </span><span class="functionid">twitter_getStreamTweets</span><span class="default">(</span><span class="default">twitterstream</span><span class="default">)</span>
+<span class="default">[</span><span class="default">id</span><span class="default">,</span><span class="default">tweets</span><span class="default">,</span><span class="default">info</span><span class="default">] = </span><span class="functionid">twitter_getStreamTweets</span><span class="default">(</span><span class="default">twitterstream</span><span class="default">,</span><span class="default">n</span><span class="default">)</span>
+<span class="default">[</span><span class="default">id</span><span class="default">,</span><span class="default">tweets</span><span class="default">,</span><span class="default">info</span><span class="default">] = </span><span class="functionid">twitter_getStreamTweets</span><span class="default">(</span><span class="default">twitterstream</span><span class="default">,</span><span class="default">n</span><span class="default">,</span><span class="default">tweetind</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">twitterstream :</span>
+            <dd><p class="para">Java object. Created using twitterStream_init</p></dd></dt>
+        <dt><span class="term">n :</span>
+            <dd><p class="para">Double. Number of tweets to be retrived. Default is all are retrieved.</p></dd></dt>
+        <dt><span class="term">tweetind :</span>
+            <dd><p class="para">String. Option to retrieve either the latest n tweets (&#0034;last&#0034;) or the earliest n tweets (&#0034;first&#0034;)</p></dd></dt>
+        <dt><span class="term">id :</span>
+            <dd><p class="para">Integer64. Tweet ID.</p></dd></dt>
+        <dt><span class="term">tweets :</span>
+            <dd><p class="para">List. Tweet text.</p></dd></dt>
+        <dt><span class="term">info :</span>
+            <dd><p class="para">Struct. Contains information regarding the tweet.</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Retrieve the tweets from the stream stored inside the .</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">twitterS</span> <span class="scilaboperator">=</span> <span class="scilabid">twitterStream_init</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span>
+<a class="scilabcommand" href="scilab://consolebox">consolebox</a> <span class="scilabstring">on</span>
+<span class="scilabid">twitter_displayStream</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabopenclose">)</span>
+<span class="scilabid">twitter_stream</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">limit</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">30</span><span class="scilabopenclose">)</span>
+<span class="scilabcomment">// After streaming has stopped</span>
+<span class="scilabopenclose">[</span><span class="scilabid">id1</span><span class="scilabdefault">,</span><span class="scilabid">tweets1</span><span class="scilabdefault">,</span><span class="scilabid">info1</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">twitter_getStreamTweets</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabopenclose">)</span>
+<span class="scilabopenclose">[</span><span class="scilabid">id2</span><span class="scilabdefault">,</span><span class="scilabid">tweets2</span><span class="scilabdefault">,</span><span class="scilabid">info2</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">twitter_getStreamTweets</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabdefault">,</span><span class="scilabnumber">10</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">first</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabopenclose">[</span><span class="scilabid">id3</span><span class="scilabdefault">,</span><span class="scilabid">tweets3</span><span class="scilabdefault">,</span><span class="scilabid">info3</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">twitter_getStreamTweets</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabdefault">,</span><span class="scilabnumber">10</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">last</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="twitter_stream.html" class="link">twitter_stream</a> &#8212; Begins the twitter streaming api</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T.</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="twitter_displayStream.html">&lt;&lt; twitter_displayStream</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="twitter_getTweets.html">twitter_getTweets &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>
