@@ -15,14 +15,10 @@ function [id,tweets,info] = twitter_getStreamTweets(twitterstream,n,tweetind)
 //     info : Struct. Contains information regarding the tweet.
 //
 // Description
-//     Retrieve the tweets from the stream stored inside the .
+//     Retrieve the tweets from the stream stored inside the twitterstream object.
 //
 // Examples
-//    twitterS = twitterStream_init()
-//    consolebox on
-//    twitter_displayStream(twitterS)
-//    twitter_stream(twitterS,"limit",30)
-//    // After streaming has stopped
+//    // After streaming has started for a while
 //    [id1,tweets1,info1] = twitter_getStreamTweets(twitterS)
 //    [id2,tweets2,info2] = twitter_getStreamTweets(twitterS,10,"first")
 //    [id3,tweets3,info3] = twitter_getStreamTweets(twitterS,10,"last")
@@ -33,17 +29,6 @@ function [id,tweets,info] = twitter_getStreamTweets(twitterstream,n,tweetind)
 //
 // Authors
 //     Joshua T.
-    
-    // Get the tweets from stream
-    // Default is all, last
-    // order is the wrong word for it
-    // it should be sth telling the first n or last n.
-    
-    // getStatus() - maybe renamed to getAllStatus()
-    // getFirstStatus()
-    // getFirstStatus(int n)
-    // getLastStatus()
-    // getLastStatus(int n)
     
     bool = jautoUnwrap();
     jautoUnwrap(%t);
@@ -91,11 +76,8 @@ function [id,tweets,info] = twitter_getStreamTweets(twitterstream,n,tweetind)
             // Get User Information 
             utemp = temp.getUser();
             info(i).username = utemp.getName();
-            //user.name = utemp.getName();
             info(i).userscreenname = utemp.getScreenName();
-            //user.screenname = utemp.getScreenName();
             info(i).userid = utemp.getId();
-            //user.userid =  utemp.getId();
             uloc = utemp.getLocation();
             if uloc == [] then
                 uloc = "N/A"
@@ -106,38 +88,20 @@ function [id,tweets,info] = twitter_getStreamTweets(twitterstream,n,tweetind)
             loc = temp.getPlace()
             if isempty(loc) then
                 info(i).tweetgeotag = %f
-                //place.geotag = %f
                 info(i).tweetplacename = "N/A"
-                //place.placename = "N/A"
                 info(i).tweetplaceid = "N/A"
-                //place.placeid = "N/A"
                 info(i).tweetcountry = "N/A"
-                //place.country = "N/A"
                 info(i).tweetcountrycode = "N/A"
-                //place.countrycode = "N/A"
             else
                 info(i).tweetgeotag = %t
-                //place.geotag = %t
                 info(i).tweetplacename = loc.getName()
-                //place.placename = loc.getName()
                 info(i).tweetplaceid = loc.getId()
-                //place.placeid = loc.getId()
                 info(i).tweetcountry = loc.getCountry()
-                //place.country = loc.getCountry()
                 info(i).tweetcountrycode = loc.getCountryCode()
-                //place.countrycode = loc.getCountryCode()
-
             end 
-            //info(i).place = place;
-
-
-
         end
-
     end
     
     jautoUnwrap(bool);
-    
-    
     
 endfunction

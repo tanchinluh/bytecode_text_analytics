@@ -17,7 +17,7 @@
 
   <refnamediv>
     <refname>twitter_clearStream</refname>
-    <refpurpose>Remove tweets from stream</refpurpose>
+    <refpurpose>Remove tweets retrieved from streaming</refpurpose>
   </refnamediv>
 
 
@@ -42,7 +42,7 @@
 <refsection>
    <title>Description</title>
    <para>
-Remove the tweets from stream
+Tweets retrieved from stream will be stored temporarily inside the twitterstream object. Subsequent streaming will append the new tweets. This function removes all stored tweets.
    </para>
    <para>
    </para>

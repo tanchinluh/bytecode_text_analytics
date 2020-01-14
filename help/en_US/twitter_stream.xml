@@ -17,7 +17,7 @@
 
   <refnamediv>
     <refname>twitter_stream</refname>
-    <refpurpose>Begins the twitter streaming api</refpurpose>
+    <refpurpose>Begins the twitter streaming</refpurpose>
   </refnamediv>
 
 
@@ -55,7 +55,7 @@
         </varlistentry>
         <varlistentry>
             <term>"limit" :</term>
-            <listitem><para> Double. The number of tweets to obtain from stream before stopping.</para></listitem>
+            <listitem><para> Double. The number of tweets to obtain from stream before stopping. If this option is not provided, streaming is continuous and needs to be stopped with twitter_stopStream.</para></listitem>
         </varlistentry>
         <varlistentry>
             <term>"csv" :</term>
@@ -88,6 +88,7 @@ twitter_stream(twitterS,"query","ice cream","limit",30)
    <title>See also</title>
    <simplelist type="inline">
    <member><link linkend="twitter_getStreamTweets">twitter_getStreamTweets</link></member>
+   <member><link linkend="twitter_stopStream">twitter_stopStream</link></member>
    </simplelist>
 </refsection>
 

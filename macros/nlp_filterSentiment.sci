@@ -13,7 +13,7 @@ function [filtered_str,ind] = nlp_filterSentiment(senti_vec,str_vec,senti,n)
 //     ind : Double matrix. Index of the filtered text 
 // 
 // Description
-//     Extracts strings from a string array based on a given sentiment 
+//     Extracts strings from a string array based on a given sentiment. 
 //
 // Examples
 //     sentiments = ["Neutral";"Neutral";"Positive"]

@@ -47,7 +47,7 @@
 <refsection>
    <title>Description</title>
    <para>
-Adds jar files to the Scilab Java classpath. The Stanford CoreNLP jar libraries are needed for the NLP functions. This functions provide a convenient way doing so.
+Adds jar files to the Scilab Java classpath. The Stanford CoreNLP jar libraries are needed for the NLP functions. This functions provide a convenient way of doing so.
    </para>
    <para>
    </para>

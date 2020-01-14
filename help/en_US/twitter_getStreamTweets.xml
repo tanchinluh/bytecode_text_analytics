@@ -64,7 +64,7 @@
 <refsection>
    <title>Description</title>
    <para>
-Retrieve the tweets from the stream stored inside the .
+Retrieve the tweets from the stream stored inside the twitterstream object.
    </para>
    <para>
 </para>
@@ -73,11 +73,7 @@ Retrieve the tweets from the stream stored inside the .
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
-twitterS = twitterStream_init()
-consolebox on
-twitter_displayStream(twitterS)
-twitter_stream(twitterS,"limit",30)
-// After streaming has stopped
+// After streaming has started for a while
 [id1,tweets1,info1] = twitter_getStreamTweets(twitterS)
 [id2,tweets2,info2] = twitter_getStreamTweets(twitterS,10,"first")
 [id3,tweets3,info3] = twitter_getStreamTweets(twitterS,10,"last")

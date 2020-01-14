@@ -10,10 +10,10 @@ function twitterstream = twitterStream_init(con_key,con_sec,acc_tok,acc_sec)
 //     con_sec : String. Consumer secret.
 //     acc_tok : String. Access token.
 //     acc_sec : String. Access secret.
-//     twitter : Java object. Connects to Twitter API.
+//     twitter : Java object. Connects to Twitter Stream API.
 //
 // Description
-//     Creates a Twitter object that allows you to access the Twitter API. You need a Twitter developer account  in order to obtain the 4 required parameters. This function uses the Twitter4J library.
+//     Creates a Twitter object that allows you to access the Twitter Stream API. You need a Twitter developer account  in order to obtain the 4 required parameters. This function uses the Twitter4J library.
 //
 // Examples
 //    twitterS = twitterStream_init()

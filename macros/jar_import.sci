@@ -10,7 +10,7 @@ function [jars] = jar_import(folderpath)
 //     jars : String array. Jar files added to the classpath.
 //
 // Description
-//     Adds jar files to the Scilab Java classpath. The Stanford CoreNLP jar libraries are needed for the NLP functions. This functions provide a convenient way doing so.
+//     Adds jar files to the Scilab Java classpath. The Stanford CoreNLP jar libraries are needed for the NLP functions. This functions provide a convenient way of doing so.
 //
 //
 // See also

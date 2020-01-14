@@ -17,7 +17,7 @@
 
   <refnamediv>
     <refname>twitter_stopStream</refname>
-    <refpurpose>Stops the twitter stream</refpurpose>
+    <refpurpose>Stops the twitter streaming</refpurpose>
   </refnamediv>
 
 
@@ -42,7 +42,7 @@
 <refsection>
    <title>Description</title>
    <para>
-Stops the twitter stream.
+Stops the twitter streaming.
    </para>
    <para>
    </para>

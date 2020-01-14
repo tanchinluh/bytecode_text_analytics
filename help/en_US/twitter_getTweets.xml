@@ -79,7 +79,7 @@
 <refsection>
    <title>Description</title>
    <para>
-Retrieve tweets from Twitter that match the search query. Limitations from Twitter API apply. When querying with a location paramter, search results will include both geotagged and non-geotagged tweets. The non-geotagged are based on the location in the user's profile.
+Retrieve tweets from Twitter that match the search query. Limitations from Twitter API apply. When querying with a location parameter, search results will include both geotagged and non-geotagged tweets. The non-geotagged are based on the location in the user's profile.
    </para>
    <para>
 </para>

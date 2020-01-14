@@ -32,7 +32,7 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">twitter_stream</h1>
-    <p class="refpurpose">Begins the twitter streaming api</p></div>
+    <p class="refpurpose">Begins the twitter streaming</p></div>
 
 
 <div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
@@ -51,7 +51,7 @@
         <dt><span class="term">&#0034;box&#0034; :</span>
             <dd><p class="para">Double matrix. Matrix containing the coordinates of a bounding box. The coordinates should be stored as [SWlong SWlat; NElong NElat].</p></dd></dt>
         <dt><span class="term">&#0034;limit&#0034; :</span>
-            <dd><p class="para">Double. The number of tweets to obtain from stream before stopping.</p></dd></dt>
+            <dd><p class="para">Double. The number of tweets to obtain from stream before stopping. If this option is not provided, streaming is continuous and needs to be stopped with twitter_stopStream.</p></dd></dt>
         <dt><span class="term">&#0034;csv&#0034; :</span>
             <dd><p class="para">String. Automatically save tweets into a CSV using the given file name.</p></dd></dt></dl></div>
 
@@ -66,7 +66,8 @@
 <span class="scilabid">twitter_stream</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">query</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">ice cream</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">limit</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">30</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
 
 <div class="refsection"><h3 class="title">See also</h3>
-   <ul class="itemizedlist"><li class="member"><a href="twitter_getStreamTweets.html" class="link">twitter_getStreamTweets</a> &#8212; Import tweets from Twitter stream into Scilab</li></ul></div>
+   <ul class="itemizedlist"><li class="member"><a href="twitter_getStreamTweets.html" class="link">twitter_getStreamTweets</a> &#8212; Import tweets from Twitter stream into Scilab</li>
+   <li class="member"><a href="twitter_stopStream.html" class="link">twitter_stopStream</a> &#8212; Stops the twitter streaming</li></ul></div>
 
 <div class="refsection"><h3 class="title">Authors</h3>
    <ul class="itemizedlist"><li class="member">Joshua T.</li></ul></div>

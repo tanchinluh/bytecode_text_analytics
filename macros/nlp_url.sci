@@ -1,8 +1,9 @@
 function [rep,stat,stderr] = nlp_url(in_str,ann,url,json)
 // Sends an annotation request to a NLP server.
 //
-// Calling Sequence
+// Syntax
 //     [rep,stat,stderr] = nlp_url(in_str,ann,url)
+//     [rep,stat,stderr] = nlp_url(in_str,ann,url,json)
 //
 // Parameters
 //     in_str : Input string

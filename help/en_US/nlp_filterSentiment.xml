@@ -62,7 +62,7 @@
 <refsection>
    <title>Description</title>
    <para>
-Extracts strings from a string array based on a given sentiment
+Extracts strings from a string array based on a given sentiment.
    </para>
    <para>
 </para>

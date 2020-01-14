@@ -39,7 +39,7 @@
         </varlistentry>
         <varlistentry>
             <term>bool :</term>
-            <listitem><para> Boolean. Indicate whether tweets should be displayed or not.</para></listitem>
+            <listitem><para> Boolean. Indicate whether tweets should be displayed (%t) or not (%f).</para></listitem>
         </varlistentry>
    </variablelist>
 </refsection>

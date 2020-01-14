@@ -7,7 +7,7 @@ function twitter_displayStream(twitterstream,bool)
 //
 // Parameters
 //     twitterstream : Java object. Created using twitterStream_init
-//     bool : Boolean. Indicate whether tweets should be displayed or not.
+//     bool : Boolean. Indicate whether tweets should be displayed (%t) or not (%f).
 //
 // Description
 //     Displays some infomation on the streamed tweets on the Scilab Java console. The information shown are the tweet ID, the user's screen name, the tweet time as well as the tweet itself.

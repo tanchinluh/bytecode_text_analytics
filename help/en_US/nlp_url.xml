@@ -21,6 +21,15 @@
   </refnamediv>
 
 
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [rep,stat,stderr] = nlp_url(in_str,ann,url)
+   [rep,stat,stderr] = nlp_url(in_str,ann,url,json)
+   
+   </synopsis>
+</refsynopsisdiv>
+
 <refsection>
    <title>Parameters</title>
    <variablelist>

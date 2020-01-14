@@ -18,7 +18,7 @@ function [id,tweets,info] = twitter_getTweets(twitter,str,varargin)
     //      info :  Struct. Additional infomation.
     //
     // Description
-    //     Retrieve tweets from Twitter that match the search query. Limitations from Twitter API apply. When querying with a location paramter, search results will include both geotagged and non-geotagged tweets. The non-geotagged are based on the location in the user's profile.
+    //     Retrieve tweets from Twitter that match the search query. Limitations from Twitter API apply. When querying with a location parameter, search results will include both geotagged and non-geotagged tweets. The non-geotagged are based on the location in the user's profile.
     //
     // Examples
     //      twitter = twitter_init()
@@ -114,11 +114,8 @@ function [id,tweets,info] = twitter_getTweets(twitter,str,varargin)
             // Get User Information 
             utemp = temp.getUser();
             info(i).username = utemp.getName();
-            //user.name = utemp.getName();
             info(i).userscreenname = utemp.getScreenName();
-            //user.screenname = utemp.getScreenName();
             info(i).userid = utemp.getId();
-            //user.userid =  utemp.getId();
             uloc = utemp.getLocation();
             if uloc == [] then
                 uloc = "N/A"
@@ -129,34 +126,19 @@ function [id,tweets,info] = twitter_getTweets(twitter,str,varargin)
             loc = temp.getPlace()
             if isempty(loc) then
                 info(i).tweetgeotag = %f
-                //place.geotag = %f
                 info(i).tweetplacename = "N/A"
-                //place.placename = "N/A"
                 info(i).tweetplaceid = "N/A"
-                //place.placeid = "N/A"
                 info(i).tweetcountry = "N/A"
-                //place.country = "N/A"
                 info(i).tweetcountrycode = "N/A"
-                //place.countrycode = "N/A"
             else
                 info(i).tweetgeotag = %t
-                //place.geotag = %t
                 info(i).tweetplacename = loc.getName()
-                //place.placename = loc.getName()
                 info(i).tweetplaceid = loc.getId()
-                //place.placeid = loc.getId()
                 info(i).tweetcountry = loc.getCountry()
-                //place.country = loc.getCountry()
                 info(i).tweetcountrycode = loc.getCountryCode()
-                //place.countrycode = loc.getCountryCode()
 
             end 
-            //info(i).place = place;
-
-
-
         end
-
     end
     jautoUnwrap(bool);
 

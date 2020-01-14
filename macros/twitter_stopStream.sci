@@ -1,5 +1,5 @@
 function twitter_stopStream(twitterstream)
-// Stops the twitter stream
+// Stops the twitter streaming
 //
 // Syntax
 //     twitter_stopStream(twitterstream)
@@ -8,7 +8,7 @@ function twitter_stopStream(twitterstream)
 //     twitterstream : Java object. Created using twitterStream_init
 //
 // Description
-//     Stops the twitter stream.
+//     Stops the twitter streaming.
 //
 //
 // See also

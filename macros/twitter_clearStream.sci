@@ -1,5 +1,5 @@
 function twitter_clearStream(twitterstream)
-// Remove tweets from stream
+// Remove tweets retrieved from streaming 
 //
 // Syntax
 //     twitter_clearStream(twitterstream)
@@ -8,7 +8,7 @@ function twitter_clearStream(twitterstream)
 //     twitterstream : Java object. Created using twitterStream_init
 //
 // Description
-//     Remove the tweets from stream
+//     Tweets retrieved from stream will be stored temporarily inside the twitterstream object. Subsequent streaming will append the new tweets. This function removes all stored tweets.
 //
 //
 // See also
@@ -17,7 +17,6 @@ function twitter_clearStream(twitterstream)
 // Authors
 //     Joshua T.
     
-    // Remove tweets from stream
     twitterstream.clearTweets()
     
 endfunction

@@ -1,5 +1,5 @@
 function twitter_stream(twitterstream,varargin)
-// Begins the twitter streaming api
+// Begins the twitter streaming
 //
 // Syntax
 //     twitter_displayStream(twitterstream)
@@ -11,7 +11,7 @@ function twitter_stream(twitterstream,varargin)
 //      "query" : String. Query used to filter the tweets. Default query is "coffee". There is a 60 character limit for the query.
 //      "lang" : String. Tweet language. Default is "en"
 //      "box" : Double matrix. Matrix containing the coordinates of a bounding box. The coordinates should be stored as [SWlong SWlat; NElong NElat].
-//     "limit" : Double. The number of tweets to obtain from stream before stopping.
+//     "limit" : Double. The number of tweets to obtain from stream before stopping. If this option is not provided, streaming is continuous and needs to be stopped with twitter_stopStream.
 //     "csv" : String. Automatically save tweets into a CSV using the given file name. 
 //
 // Description
@@ -25,6 +25,7 @@ function twitter_stream(twitterstream,varargin)
 //
 // See also
 //    twitter_getStreamTweets
+//    twitter_stopStream
 //
 // Authors
 //     Joshua T.
