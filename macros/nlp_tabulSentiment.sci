@@ -27,7 +27,6 @@ function tab = nlp_tabulSentiment(sentiment_vec)
     tab_key = ["Very negative" "Negative" "Neutral" "Positive" "Very positive"]
     i = 1
     for keyname = tab_key
-        //disp(keyname)
         ind = find(m(1) == keyname)
         if ind ~= [] then
             tab_val(i) = m(2)(ind)

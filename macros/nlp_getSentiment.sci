@@ -52,7 +52,7 @@ function senti = nlp_getSentiment(str)
                 longest = length(partText);
             end // end if
         
-        end // end inner loo
+        end // end inner loop
     
         senti(i) = mainSentiment
     

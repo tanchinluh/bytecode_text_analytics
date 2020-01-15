@@ -3,10 +3,10 @@
   <macro name="getTApath" file="getTApath.bin" md5="04ca0d1af296c8fd41b64ece4565f0a5"/>
   <macro name="jar_import" file="jar_import.bin" md5="42b3f68fa8afcbc036e3cfd64a652a42"/>
   <macro name="nlp_filterSentiment" file="nlp_filterSentiment.bin" md5="2743b773b5367b259283409aea6d3b28"/>
-  <macro name="nlp_getSentiment" file="nlp_getSentiment.bin" md5="c792c4e1ff500490a572068c8b2160ff"/>
+  <macro name="nlp_getSentiment" file="nlp_getSentiment.bin" md5="d538765c9e823677e9fcd81f61fef0f5"/>
   <macro name="nlp_sentiment" file="nlp_sentiment.bin" md5="0343bc56b0b7465a0a8b96badf2d4159"/>
   <macro name="nlp_simple" file="nlp_simple.bin" md5="1bdff9810d3d097c0f3168585e553d92"/>
-  <macro name="nlp_tabulSentiment" file="nlp_tabulSentiment.bin" md5="418722d86922a3b2e6177b4d809ac062"/>
+  <macro name="nlp_tabulSentiment" file="nlp_tabulSentiment.bin" md5="497be6496ba56227f72ef57cfabe1924"/>
   <macro name="nlp_url" file="nlp_url.bin" md5="1f4715572e31ead2c771857319782343"/>
   <macro name="pbButton_callback" file="pbButton_callback.bin" md5="43becbd89803366aff824950bf188498"/>
   <macro name="pbSentiment_callback" file="pbSentiment_callback.bin" md5="27c7bae1fc0f81a91e470ed2dffc3e71"/>
