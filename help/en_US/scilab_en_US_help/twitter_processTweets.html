@@ -1,0 +1,90 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>twitter_processTweets</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="twitter_init.html">&lt;&lt; twitter_init</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="twitter_stopStream.html">twitter_stopStream &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">text_analytics</a> &gt;&gt; <a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a> &gt; twitter_processTweets</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">twitter_processTweets</h1>
+    <p class="refpurpose">Perform some text processing on tweets</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">senti</span><span class="default">,</span><span class="default">tweets</span><span class="default">] = </span><span class="functionid">twitter_processTweets</span><span class="default">(</span><span class="default">rawtweets</span><span class="default">)</span>
+<span class="default">[</span><span class="default">senti</span><span class="default">,</span><span class="default">tweets</span><span class="default">] = </span><span class="functionid">twitter_processTweets</span><span class="default">(</span><span class="default">rawtweets</span><span class="default">,</span><span class="default">prog</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">rawtweets :</span>
+            <dd><p class="para">String array. Retrieved tweets</p></dd></dt>
+        <dt><span class="term">prog :</span>
+            <dd><p class="para">String. Optional input to display progress. The options are &#0034;on&#0034;,&#0034;off&#0034;,&#0034;gui&#0034;.</p></dd></dt>
+        <dt><span class="term">senti:</span>
+            <dd><p class="para">String array. Sentiment of tweets</p></dd></dt>
+        <dt><span class="term">tweets :</span>
+            <dd><p class="para">String array. Processed tweets</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">A very simple text processing of tweets for sentiment analysis. It removes all non-unicode symbols, new lines and excess space. The sentiment is then determined using nlp_getSentiment. This function requires the Stanford CoreNLP libraries to be added to the Scilab classpath.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">twitter</span> <span class="scilaboperator">=</span> <span class="scilabid">twitter_init</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span>
+<span class="scilabid">str</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">coffee</span><span class="scilabstring">&#0034;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">id1</span><span class="scilabdefault">,</span><span class="scilabid">tweets1</span><span class="scilabdefault">,</span><span class="scilabid">info1</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">twitter_getTweets</span><span class="scilabopenclose">(</span><span class="scilabid">twitter</span><span class="scilabdefault">,</span><span class="scilabid">str</span><span class="scilabopenclose">)</span>
+<span class="scilabopenclose">[</span><span class="scilabid">senti</span><span class="scilabdefault">,</span><span class="scilabid">proctweets</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">twitter_processTweets</span><span class="scilabopenclose">(</span><a class="scilabmacro" href="scilab://list2vec">list2vec</a><span class="scilabopenclose">(</span><span class="scilabid">tweets1</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">on</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="twitter_getTweets.html" class="link">twitter_getTweets</a> &#8212; Retrieve tweets from Twitter</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T.</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="twitter_init.html">&lt;&lt; twitter_init</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="twitter_stopStream.html">twitter_stopStream &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

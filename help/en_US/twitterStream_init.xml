@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from twitterStream_init.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="twitterStream_init" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>twitterStream_init</refname>
+    <refpurpose>Creates a Twitter object to connect to Twitter Stream API</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   twitter = twitter_init()
+   twitter = twitter_init(con_key,con_sec,acc_tok,acc_sec)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>con_key :</term>
+            <listitem><para> String. Consumer key.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>con_sec :</term>
+            <listitem><para> String. Consumer secret.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>acc_tok :</term>
+            <listitem><para> String. Access token.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>acc_sec :</term>
+            <listitem><para> String. Access secret.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>twitter :</term>
+            <listitem><para> Java object. Connects to Twitter Stream API.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Creates a Twitter object that allows you to access the Twitter Stream API. You need a Twitter developer account  in order to obtain the 4 required parameters. This function uses the Twitter4J library.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+twitterS = twitterStream_init()
+consolebox on
+twitter_displayStream(twitterS,%t)
+twitter_stream(twitterS,"limit",15)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="twitter_init">twitter_init</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T. - Bytecode Malaysia.</member>
+   </simplelist>
+</refsection>
+</refentry>

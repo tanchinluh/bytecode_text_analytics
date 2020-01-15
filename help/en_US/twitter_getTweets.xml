@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from twitter_getTweets.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="twitter_getTweets" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>twitter_getTweets</refname>
+    <refpurpose>Retrieve tweets from Twitter</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [id,tweets,info] = twitter_getTweets(twitter,str)
+   [id,tweets,info] = twitter_getTweets(twitter,str,options)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>twitter :</term>
+            <listitem><para> Twitter object. Obtained from twitter_init function</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>str :</term>
+            <listitem><para> String. Search query.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>options:</term>
+            <listitem><para> Optional parameters (in key-value pairs) to refine the search. The optional parameters are the following:</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>"ntweets" :</term>
+            <listitem><para> Max number of tweets to return (default:15)</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>"lang" :</term>
+            <listitem><para> Tweet language code (default:en)</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>"latlon" :</term>
+            <listitem><para> location coordinates [lat,lon] (none by default)</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>"rad" :</term>
+            <listitem><para> Radius of location parameter in km (default:10)</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>id :</term>
+            <listitem><para> Integer 64. Tweet ID.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>tweets :</term>
+            <listitem><para> List. The tweet text.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>info :</term>
+            <listitem><para>  Struct. Additional infomation.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Retrieve tweets from Twitter that match the search query. Limitations from Twitter API apply. When querying with a location parameter, search results will include both geotagged and non-geotagged tweets. The non-geotagged are based on the location in the user's profile.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+twitter = twitter_init()
+str = "coffee"
+[id1,tweets1,info1] = twitter_getTweets(twitter,str)
+// San Fransisco 37.7749° N, 122.4194° W
+[id2,tweets2,info2] = twitter_getTweets(twitter,str,"latlon",[37.7749,-122.4194])
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="twitter_init">twitter_init</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T. - Bytecode Malaysia.</member>
+   </simplelist>
+</refsection>
+</refentry>

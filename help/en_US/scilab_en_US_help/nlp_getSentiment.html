@@ -1,0 +1,83 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>nlp_getSentiment</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="nlp_filterSentiment.html">&lt;&lt; nlp_filterSentiment</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="nlp_sentiment.html">nlp_sentiment &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">text_analytics</a> &gt;&gt; <a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a> &gt; nlp_getSentiment</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">nlp_getSentiment</h1>
+    <p class="refpurpose">Obtains the sentiment of a given string</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">senti</span><span class="default"> = </span><span class="functionid">nlp_getSentiment</span><span class="default">(</span><span class="default">str</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">str :</span>
+            <dd><p class="para">String. The text to be analysed</p></dd></dt>
+        <dt><span class="term">senti :</span>
+            <dd><p class="para">String. The sentiment of the text</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Determines the sentiment of a given text. The sentiment is set by the longest sentence in the text. This function requires the Stanford CoreNLP libraries to be added to the Scilab classpath. For a more comprehensive sentiment analysis (or for an online version), please use nlp_sentiment.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">str</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">I am happy. This is a long, sad and heart breaking sentence. You are happy</span><span class="scilabstring">.</span><span class="scilabstring">&#0034;</span>
+<span class="scilabid">sentiment</span> <span class="scilaboperator">=</span> <span class="scilabid">nlp_getSentiment</span><span class="scilabopenclose">(</span><span class="scilabid">str</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="nlp_sentiment.html" class="link">nlp_sentiment</a> &#8212; Sentiment analysis of a sentence using Stanford NLP</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T. - Bytecode Malaysia.</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="nlp_filterSentiment.html">&lt;&lt; nlp_filterSentiment</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="nlp_sentiment.html">nlp_sentiment &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

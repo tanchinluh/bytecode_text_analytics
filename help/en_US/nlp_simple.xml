@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from nlp_simple.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="nlp_simple" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>nlp_simple</refname>
+    <refpurpose>Runs a specified annotator</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   res = nlp_simple(str,ann)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>str :</term>
+            <listitem><para> String. The text to be analyzed</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>ann :</term>
+            <listitem><para> String. The specified annotator. Available annotators are sentence splitting (ssplit), tokenization (tokenize), part of speech tagging (pos), lemmatization (lemma), named entity recognition (ner), constituency parsing (parse), dependency parsing (depparse), coreference resolution (dcoref), natural logic polarity, (natlog) and open information extraction (openie).</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>res :</term>
+            <listitem><para> List. The result from the annotation.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Runs the specified annotator on the string. This uses annotators from Stanford Simple CoreNLP. Note: Certain annotators (ner, depparse, dcoref) requires a lot of memory. You will need to increase Scilab's Java heap memory to be several GB or more in order to work. The heap memory can be adjusted under Preferences.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+str1 = "The lion and the unicorn were fighting for the crown. The lion beat the unicorn all around the town."
+res1 = nlp_simple(str1,"ssplit")
+res2 = nlp_simple(str1,"tokenize")
+res3 = nlp_simple(str1,"pos")
+res4 = nlp_simple(str1,"lemma")
+str2 = "3 men lived in Gotham. They went on vacation to London."
+res5 = nlp_simple(str2,"parse")
+res6 = nlp_simple(str2,"depparse")
+res7 = nlp_simple(str2,"natlog")
+res8 = nlp_simple(str2,"openie")
+res9 = nlp_simple(str2,"ner")
+str3 = "Mary had a little lamb. Its fleece was white as snow. And everywhere that she went it was sure to go."
+res10 = nlp_simple(str3,"dcoref")
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="nlp_url">nlp_url</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T.</member>
+   </simplelist>
+</refsection>
+</refentry>

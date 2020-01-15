@@ -2,8 +2,18 @@
 <!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_1_0.dtd">
 <toc version="1.0">
 <tocitem target="index" text="text_analytics">
-<tocitem target="section_e622df15fba87789584c07120a02e36b" text="text_analytics">
+<tocitem target="section_b93ecefec7958118a675c2f66028b91b" text="text_analytics">
+<tocitem target="getTApath" text="getTApath"/>
+<tocitem target="jar_import" text="jar_import"/>
+<tocitem target="nlp_filterSentiment" text="nlp_filterSentiment"/>
+<tocitem target="nlp_getSentiment" text="nlp_getSentiment"/>
 <tocitem target="nlp_sentiment" text="nlp_sentiment"/>
+<tocitem target="nlp_simple" text="nlp_simple"/>
+<tocitem target="nlp_tabulSentiment" text="nlp_tabulSentiment"/>
+<tocitem target="nlp_url" text="nlp_url"/>
+<tocitem target="pbButton_callback" text="pbButton_callback"/>
+<tocitem target="pbSentiment_callback" text="pbSentiment_callback"/>
+<tocitem target="popSentiment_callback" text="popSentiment_callback"/>
 <tocitem target="text_gencloud" text="text_gencloud"/>
 <tocitem target="text_porterstemmer" text="text_porterstemmer"/>
 <tocitem target="text_stripdollar" text="text_stripdollar"/>
@@ -12,6 +22,16 @@
 <tocitem target="text_stripnumber" text="text_stripnumber"/>
 <tocitem target="text_stripurl" text="text_stripurl"/>
 <tocitem target="text_tokenize" text="text_tokenize"/>
+<tocitem target="twitterStream_init" text="twitterStream_init"/>
+<tocitem target="twitter_TweetSentimentDemo" text="twitter_TweetSentimentDemo"/>
+<tocitem target="twitter_clearStream" text="twitter_clearStream"/>
+<tocitem target="twitter_displayStream" text="twitter_displayStream"/>
+<tocitem target="twitter_getStreamTweets" text="twitter_getStreamTweets"/>
+<tocitem target="twitter_getTweets" text="twitter_getTweets"/>
+<tocitem target="twitter_init" text="twitter_init"/>
+<tocitem target="twitter_processTweets" text="twitter_processTweets"/>
+<tocitem target="twitter_stopStream" text="twitter_stopStream"/>
+<tocitem target="twitter_stream" text="twitter_stream"/>
 </tocitem>
 </tocitem>
 </toc>

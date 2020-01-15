@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from nlp_url.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="nlp_url" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>nlp_url</refname>
+    <refpurpose>Sends an annotation request to a NLP server.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [rep,stat,stderr] = nlp_url(in_str,ann,url)
+   [rep,stat,stderr] = nlp_url(in_str,ann,url,json)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>in_str :</term>
+            <listitem><para> Input string</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>ann :</term>
+            <listitem><para> Specified annotators</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>url :</term>
+            <listitem><para> A valid URL with port number which point to the NLP server</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>json :</term>
+            <listitem><para> Boolean. Converts response to struct if %t(default %f). Requires JSON Toolbox to be installed.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>rep :</term>
+            <listitem><para> String array or struct. Response from NLP server.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>stat :</term>
+            <listitem><para> an integer, the error status. status=0 if no error occurred</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>stderr :</term>
+            <listitem><para> Column of text: error message.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This is a function to send an annotation request to a server hosting Stanford NLP engine and return the annotation results. This function requires the connection to the Standford NLP server. Some annotators require other annotators to be performed first (for example ssplit requires tokenize). The results from the required annotators are included as well.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+str = "I just had coffee. It was delicious."
+url = "http://127.0.0.1:9000" // if you setup a local host Stanford CoreNLP server
+[rep1,stat1,stderr1] = nlp_url(str1,"ssplit",url)
+[rep2,stat2,stderr2] = nlp_url(str1,"ssplit",url,%t)
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="nlp_simple">nlp_simple</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>C.L. Tan - Bytecode Malaysia.</member>
+   <member>Joshua Teoh - Bytecode Malaysia</member>
+   </simplelist>
+</refsection>
+</refentry>

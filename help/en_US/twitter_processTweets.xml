@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from twitter_processTweets.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="twitter_processTweets" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>twitter_processTweets</refname>
+    <refpurpose>Perform some text processing on tweets</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [senti,tweets] = twitter_processTweets(rawtweets)
+   [senti,tweets] = twitter_processTweets(rawtweets,prog)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>rawtweets :</term>
+            <listitem><para> String array. Retrieved tweets</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>prog :</term>
+            <listitem><para> String. Optional input to display progress. The options are "on","off","gui".</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>senti:</term>
+            <listitem><para> String array. Sentiment of tweets</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>tweets :</term>
+            <listitem><para> String array. Processed tweets</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+A very simple text processing of tweets for sentiment analysis. It removes all non-unicode symbols, new lines and excess space. The sentiment is then determined using nlp_getSentiment. This function requires the Stanford CoreNLP libraries to be added to the Scilab classpath.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+twitter = twitter_init()
+str = "coffee"
+[id1,tweets1,info1] = twitter_getTweets(twitter,str)
+[senti,proctweets] = twitter_processTweets(list2vec(tweets1),"on")
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="twitter_getTweets">twitter_getTweets</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T.</member>
+   </simplelist>
+</refsection>
+</refentry>

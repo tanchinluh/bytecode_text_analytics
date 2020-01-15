@@ -1,0 +1,103 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>twitter_getTweets</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="twitter_getStreamTweets.html">&lt;&lt; twitter_getStreamTweets</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="twitter_init.html">twitter_init &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">text_analytics</a> &gt;&gt; <a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a> &gt; twitter_getTweets</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">twitter_getTweets</h1>
+    <p class="refpurpose">Retrieve tweets from Twitter</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">id</span><span class="default">,</span><span class="default">tweets</span><span class="default">,</span><span class="default">info</span><span class="default">] = </span><span class="functionid">twitter_getTweets</span><span class="default">(</span><span class="default">twitter</span><span class="default">,</span><span class="default">str</span><span class="default">)</span>
+<span class="default">[</span><span class="default">id</span><span class="default">,</span><span class="default">tweets</span><span class="default">,</span><span class="default">info</span><span class="default">] = </span><span class="functionid">twitter_getTweets</span><span class="default">(</span><span class="default">twitter</span><span class="default">,</span><span class="default">str</span><span class="default">,</span><span class="default">options</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">twitter :</span>
+            <dd><p class="para">Twitter object. Obtained from twitter_init function</p></dd></dt>
+        <dt><span class="term">str :</span>
+            <dd><p class="para">String. Search query.</p></dd></dt>
+        <dt><span class="term">options:</span>
+            <dd><p class="para">Optional parameters (in key-value pairs) to refine the search. The optional parameters are the following:</p></dd></dt>
+        <dt><span class="term">&#0034;ntweets&#0034; :</span>
+            <dd><p class="para">Max number of tweets to return (default:15)</p></dd></dt>
+        <dt><span class="term">&#0034;lang&#0034; :</span>
+            <dd><p class="para">Tweet language code (default:en)</p></dd></dt>
+        <dt><span class="term">&#0034;latlon&#0034; :</span>
+            <dd><p class="para">location coordinates [lat,lon] (none by default)</p></dd></dt>
+        <dt><span class="term">&#0034;rad&#0034; :</span>
+            <dd><p class="para">Radius of location parameter in km (default:10)</p></dd></dt>
+        <dt><span class="term">id :</span>
+            <dd><p class="para">Integer 64. Tweet ID.</p></dd></dt>
+        <dt><span class="term">tweets :</span>
+            <dd><p class="para">List. The tweet text.</p></dd></dt>
+        <dt><span class="term">info :</span>
+            <dd><p class="para">Struct. Additional infomation.</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Retrieve tweets from Twitter that match the search query. Limitations from Twitter API apply. When querying with a location parameter, search results will include both geotagged and non-geotagged tweets. The non-geotagged are based on the location in the user&#0039;s profile.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">twitter</span> <span class="scilaboperator">=</span> <span class="scilabid">twitter_init</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span>
+<span class="scilabid">str</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">coffee</span><span class="scilabstring">&#0034;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">id1</span><span class="scilabdefault">,</span><span class="scilabid">tweets1</span><span class="scilabdefault">,</span><span class="scilabid">info1</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">twitter_getTweets</span><span class="scilabopenclose">(</span><span class="scilabid">twitter</span><span class="scilabdefault">,</span><span class="scilabid">str</span><span class="scilabopenclose">)</span>
+<span class="scilabcomment">// San Fransisco 37.7749° N, 122.4194° W</span>
+<span class="scilabopenclose">[</span><span class="scilabid">id2</span><span class="scilabdefault">,</span><span class="scilabid">tweets2</span><span class="scilabdefault">,</span><span class="scilabid">info2</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">twitter_getTweets</span><span class="scilabopenclose">(</span><span class="scilabid">twitter</span><span class="scilabdefault">,</span><span class="scilabid">str</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">latlon</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">37.7749</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">122.4194</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="twitter_init.html" class="link">twitter_init</a> &#8212; Creates a Twitter object to connect to Twitter API</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T. - Bytecode Malaysia.</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="twitter_getStreamTweets.html">&lt;&lt; twitter_getStreamTweets</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="twitter_init.html">twitter_init &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

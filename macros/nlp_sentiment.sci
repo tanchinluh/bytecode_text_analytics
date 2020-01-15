@@ -16,7 +16,7 @@ function [sentiment, rep,stat,stderr] = nlp_sentiment(in_str,url)
     //    You should have received a copy of the GNU General Public License
     //    along with this program.  If not, see <http://www.gnu.org/licenses/
     //
-    // Calling Sequence
+    // Syntax
     //     [rep,stat,stderr] = nlp_sentiment(in_str,url)
     //
     // Parameters
@@ -31,6 +31,9 @@ function [sentiment, rep,stat,stderr] = nlp_sentiment(in_str,url)
     //    This is a function to call a server hosting Stanford NLP engine and return the sentiment of the input string. This unction require the connection to the Standford NLP server.
     //    
     // Examples
+    //     str = "Hello there. Have an amazing day."
+    //     url = "http://127.0.0.1:9000" // if you setup a local host Stanford CoreNLP server
+    //     [rep,stat,stderr] = nlp_sentiment(str,url)
     //
     // See also
     //    nlp_sentiment

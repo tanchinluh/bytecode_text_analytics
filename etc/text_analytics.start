@@ -34,11 +34,15 @@ function text_analyticslib = startModule()
 // mprintf("\tLoad gateways\n");
 //  exec(pathconvert(root_tlbx+"/sci_gateway/loader_gateway.sce",%f));
   mprintf("\tLoad Java libraries\n");
-//  exec(pathconvert(root_tlbx+"/src/java/loader.sce",%f));
+  exec(pathconvert(root_tlbx+"/src/java/loader.sce",%f));
 //  ilib_verbose(verboseMode);
 
 path_thirdparty = pathconvert(root_tlbx+"/thirdparty");
 javaclasspath(path_thirdparty)
+javaclasspath(path_thirdparty+"/twitter4j-core-4.0.7.jar")
+javaclasspath(path_thirdparty+"/twitter4j-async-4.0.7.jar")
+javaclasspath(path_thirdparty+"/twitter4j-stream-4.0.7.jar")
+javaclasspath(path_thirdparty+"/commons-csv-1.7.jar")
 
 // load localization
 //  addlocalizationdomain(TOOLBOX_NAME, root_tlbx + "/locales");

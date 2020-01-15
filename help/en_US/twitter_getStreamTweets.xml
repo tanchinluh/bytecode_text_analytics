@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from twitter_getStreamTweets.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="twitter_getStreamTweets" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>twitter_getStreamTweets</refname>
+    <refpurpose>Import tweets from Twitter stream into Scilab</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [id,tweets,info] = twitter_getStreamTweets(twitterstream)
+   [id,tweets,info] = twitter_getStreamTweets(twitterstream,n)
+   [id,tweets,info] = twitter_getStreamTweets(twitterstream,n,tweetind)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>twitterstream :</term>
+            <listitem><para> Java object. Created using twitterStream_init</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>n :</term>
+            <listitem><para> Double. Number of tweets to be retrived. Default is all are retrieved.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>tweetind :</term>
+            <listitem><para> String. Option to retrieve either the latest n tweets ("last") or the earliest n tweets ("first")</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>id :</term>
+            <listitem><para> Integer64. Tweet ID.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>tweets :</term>
+            <listitem><para> List. Tweet text.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>info :</term>
+            <listitem><para> Struct. Contains information regarding the tweet.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Retrieve the tweets from the stream stored inside the twitterstream object.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// After streaming has started for a while
+[id1,tweets1,info1] = twitter_getStreamTweets(twitterS)
+[id2,tweets2,info2] = twitter_getStreamTweets(twitterS,10,"first")
+[id3,tweets3,info3] = twitter_getStreamTweets(twitterS,10,"last")
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="twitter_stream">twitter_stream</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T.</member>
+   </simplelist>
+</refsection>
+</refentry>

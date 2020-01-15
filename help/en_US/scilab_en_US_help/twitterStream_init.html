@@ -1,0 +1,92 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>twitterStream_init</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="text_tokenize.html">&lt;&lt; text_tokenize</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="twitter_TweetSentimentDemo.html">twitter_TweetSentimentDemo &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">text_analytics</a> &gt;&gt; <a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a> &gt; twitterStream_init</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">twitterStream_init</h1>
+    <p class="refpurpose">Creates a Twitter object to connect to Twitter Stream API</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">twitter</span><span class="default"> = </span><span class="default">twitter_init</span><span class="default">()</span>
+<span class="default">twitter</span><span class="default"> = </span><span class="default">twitter_init</span><span class="default">(</span><span class="default">con_key</span><span class="default">,</span><span class="default">con_sec</span><span class="default">,</span><span class="default">acc_tok</span><span class="default">,</span><span class="default">acc_sec</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">con_key :</span>
+            <dd><p class="para">String. Consumer key.</p></dd></dt>
+        <dt><span class="term">con_sec :</span>
+            <dd><p class="para">String. Consumer secret.</p></dd></dt>
+        <dt><span class="term">acc_tok :</span>
+            <dd><p class="para">String. Access token.</p></dd></dt>
+        <dt><span class="term">acc_sec :</span>
+            <dd><p class="para">String. Access secret.</p></dd></dt>
+        <dt><span class="term">twitter :</span>
+            <dd><p class="para">Java object. Connects to Twitter Stream API.</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Creates a Twitter object that allows you to access the Twitter Stream API. You need a Twitter developer account  in order to obtain the 4 required parameters. This function uses the Twitter4J library.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">twitterS</span> <span class="scilaboperator">=</span> <span class="scilabid">twitterStream_init</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span>
+<a class="scilabcommand" href="scilab://consolebox">consolebox</a> <span class="scilabstring">on</span>
+<span class="scilabid">twitter_displayStream</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabdefault">,</span><span class="scilabconstants">%t</span><span class="scilabopenclose">)</span>
+<span class="scilabid">twitter_stream</span><span class="scilabopenclose">(</span><span class="scilabid">twitterS</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">limit</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">15</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="twitter_init.html" class="link">twitter_init</a> &#8212; Creates a Twitter object to connect to Twitter API</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T. - Bytecode Malaysia.</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="text_tokenize.html">&lt;&lt; text_tokenize</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b93ecefec7958118a675c2f66028b91b.html">text_analytics</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="twitter_TweetSentimentDemo.html">twitter_TweetSentimentDemo &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>
